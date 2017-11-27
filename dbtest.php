@@ -6,12 +6,12 @@ $dbport = getenv("MYSQL_SERVICE_SERVICE_PORT");
 $dbuser = 'root';
 $dbpwd = getenv("MYSQL_ROOT_PASSWORD");
 $dbnme = getenv("MYSQL_DATABASE");
+// Create connection
+$conn = new mysqli($dbhost, $dbuser, $dbpwd);
 
-echo $dbhost;
-echo "<br>";
-echo $dbport;
-echo "<br>";
-echo $dbpwd;
-echo "<br>";
-echo $dbnme;
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
 ?>
