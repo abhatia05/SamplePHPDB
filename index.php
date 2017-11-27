@@ -1,5 +1,5 @@
 <?php
-echo "<h1>Server Name:  <br>";
+echo "<h1>Server Name new:  <br>";
 echo $_SERVER['SERVER_NAME'];
 echo "<br>";
 echo "<h1>Http Host:  <br>";
