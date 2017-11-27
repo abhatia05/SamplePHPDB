@@ -1,7 +1,7 @@
 <?php
 
 echo "<h1>Server Name:  <br>";
-$dbhost = "getenv("MYSQL_SERVICE_HOST");
+$dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("MYSQL_USER");
 $dbpwd = getenv("MYSQL_PASSWORD");
