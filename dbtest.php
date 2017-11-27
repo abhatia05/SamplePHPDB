@@ -13,4 +13,4 @@ echo "<br>";
 echo $dbpwd;
 echo "<br>";
 echo $dbnme;
->
+
