@@ -1,7 +1,7 @@
 <?php
 
 echo "<h1>Server Name:  <br>";
-$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbhost = "mysql://dbservicesql:3306/";
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("MYSQL_USER");
 $dbpwd = getenv("MYSQL_PASSWORD");
@@ -15,5 +15,4 @@ if ($connection->connect_errno) {
 } else {
     printf("Connected to the database");
 }
-$connection->close();
 ?>
