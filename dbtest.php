@@ -7,7 +7,7 @@ $dbuser = getenv("MYSQL_USER");
 $dbpwd = getenv("MYSQL_PASSWORD");
 $dbnme = getenv("MYSQL_DATABASE");
 // Create connection
-$conn = new mysqli($dbhost, $dbuser, $dbpwd ,$dbnme);
+$conn = new mysqli($dbhost, $dbuser, $dbpwd ,$dbnme,$dbport);
 // Check connection
 if ($connection->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
