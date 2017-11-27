@@ -7,11 +7,11 @@ $dbuser = 'root';
 $dbpwd = getenv("MYSQL_ROOT_PASSWORD");
 $dbnme = getenv("MYSQL_DATABASE");
 // Create connection
-$conn = new mysqli($dbhost, $dbuser, $dbpwd);
-
+$conn = mysql_connect($dbhost, $dbuser, $dbpwd);
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 echo "Connected successfully";
+
 ?>
